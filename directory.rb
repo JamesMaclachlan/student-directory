@@ -4,7 +4,7 @@ def input_students
 
   students = []
 
-  name = gets.chomp
+  name = gets.chomp.capitalize
   hobby = gets.chomp
   height = gets.chomp
   cob = gets.chomp
@@ -30,7 +30,7 @@ def print_header
 end
 
 def print(students)
-  students.select{|student| student[:name].start_with?('b') && student[:name].length < 12}.each.with_index(1) do |student, index|
+  students.select{|student| student[:name].start_with?('B') && student[:name].length < 12}.each.with_index(1) do |student, index|
     puts "#{index}. #{student[:name]} (#{student[:cohort]} cohort, #{student[:hobby]}, #{student[:height]}, #{student[:cob]})".center(80)
   end
 end
