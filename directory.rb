@@ -6,8 +6,9 @@ def input_students
 
   name = gets.chomp.capitalize
   cohort = gets.chomp.capitalize
-  if cohort.empty?
-    cohort = "November"
+  while !name.empty? && cohort != "January" && cohort != "February" && cohort != "March" && cohort != "April" && cohort != "May" && cohort != "June" && cohort != "July" && cohort != "August" && cohort != "September" && cohort != "October" && cohort != "November" && cohort != "December"
+    puts "Please retype the month spelt correctly."
+    cohort = gets.chomp
   end
   hobby = gets.chomp.capitalize
   height = gets.chomp.capitalize
@@ -25,8 +26,9 @@ def input_students
     name = gets.chomp.capitalize
     break if name.empty?
     cohort = gets.chomp.capitalize
-    if cohort.empty?
-      cohort = "November"
+    while !name.empty? && cohort != "January" && cohort != "February" && cohort != "March" && cohort != "April" && cohort != "May" && cohort != "June" && cohort != "July" && cohort != "August" && cohort != "September" && cohort != "October" && cohort != "November" && cohort != "December"
+      puts "Please retype the month spelt correctly."
+      cohort = gets.chomp
     end
     hobby = gets.chomp.capitalize
     height = gets.chomp.capitalize
@@ -59,7 +61,7 @@ end
 
 students = input_students
 
-if students.count > 0
+if students.count > 1
   print_header
   print(students)
   print_footer(students)
